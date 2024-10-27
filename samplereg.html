@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sample registration</title>
+<style>
+h1{
+background-color:pink;
+}
+body{
+color:white;
+background-color:lightblue;
+}
+.container{
+width:400px;
+padding:20px;
+background-color:pink;
+}
+input [type="text"],input [type="password"]{
+border:2px;
+padding:10px;
+border-radius:4px;
+}
+input [type="submit"]{
+cursor:pointer;
+border:none;
+border-radius:4px;
+background-color:darkblue;
+color:white;
+padding:15px;
+}
+input [type="submit"]:hover{
+background-color:pink;
+}
+</style>
+<script>
+function validate(){
+var uname=f1.username.value;
+if(uname.length<=0){
+alert("Please Enter the username");
+return false;
+}
+if(uname.length<6){
+alert("Enter username not less than 6 characters");
+return false;
+}
+var pwd=f1.password.value;
+if(pwd.length<=0){
+alert("Please Enter password");
+return false;
+}
+if(pwd.length<6){
+alert("Enter password not less than 6 characters");
+return false;
+}
+return true;
+}
+</script>
+</head>
+<body>
+<center>
+<h1>REGISTRATION FORM</h1>
+<form name="f1">
+<div class="container">
+<label for="username"><b>Name:</b></label>
+<input type="text" placeholder="enter name" id="username"><br><br>
+<label for="password"><b>Password:</b></label>
+<input type="password" placeholder="enter password" id="password"><br><br>
+<label ><b>Phone Number:</b></label>
+<input type="text" placeholder="enter number"><br><br>
+<label><b>Email:</b></label>
+<input type="text" placeholder="enter email"><br><br>
+<input type="submit" hspace="30" value="Submit" onclick="validate()">
+</div>
+</form>
+</body>
+<html>
+
+
